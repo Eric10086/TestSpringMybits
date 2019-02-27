@@ -27,7 +27,7 @@ public class StudentController {
 
         if (rows>0){
             mv.addObject("msg","添加成功");
-            mv.setViewName("addStudent");
+            mv.setViewName("success");
         }else {
             mv.addObject("msg","添加失败");
             mv.setViewName("fail");

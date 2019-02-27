@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--引入into.jsp的头部文件--%>
+<%@ include file="/into.jsp"%>
 <html>
 <head>
     <title>Title</title>
@@ -13,7 +15,7 @@
 <body>
 <div align="center">
     <p>AddStudent.jsp</p>
-    <form method="post" action="/stu/addStudent.do">
+    <form method="post" action="<%=basePath%>/stu/addStudent.do">
         <table>
             <tr>
                 <td>姓名:</td>

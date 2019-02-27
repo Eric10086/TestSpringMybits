@@ -20,7 +20,7 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public int addStudent(Student student) {
         int rows = stuDao.insertStudent(student);
-        return 0;
+        return rows;
     }
 
     @Override
