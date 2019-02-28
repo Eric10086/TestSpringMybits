@@ -1,6 +1,6 @@
 package beans;
 
-public class Student {
+public class Student  {
     private Integer id;
     private String name;
     private Integer age;

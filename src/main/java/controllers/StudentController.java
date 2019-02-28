@@ -1,9 +1,9 @@
 package controllers;
 
 import beans.Student;
+import beans.Pages;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -41,10 +41,11 @@ public class StudentController {
         return mv;
     }
 
-    //查询
+    //查询TagParams Request
     @ResponseBody
     @RequestMapping("/quseryStudents.do")
-    public List<Student> quseryStudents(){
+    public List<Student> quseryStudents(Pages pages){
+        System.out.println(pages);
         List<Student> list = studentService.queryStudent();
         if (list==null){
             list=new ArrayList<>();
