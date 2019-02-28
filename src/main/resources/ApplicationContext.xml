@@ -18,6 +18,9 @@
     <!--加载jdbc文件-->
     <context:property-placeholder location="classpath:jdbc.properties"/>
 
+
+
+
     <!--声明数据源-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
         <property name="url" value="${jdbc.url}"/>

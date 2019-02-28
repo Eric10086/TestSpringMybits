@@ -3,9 +3,14 @@ package controllers;
 import beans.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import service.StudentService;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("/stu")
@@ -35,4 +40,15 @@ public class StudentController {
 
         return mv;
     }
+
+    @ResponseBody
+    @RequestMapping("/quseryStudents.do")
+    public List<Student> quseryStudents(){
+        List<Student> list = studentService.queryStudent();
+        if (list==null){
+            list=new ArrayList<>();
+        }
+        return list;
+    }
+
 }

@@ -12,6 +12,12 @@
     <a href="<%=basePath%>/stu/index?target=addStudent">学生添加测试</a>
     <a href="<%=basePath%>/stu/index?target=addStudent">学生查询</a>
 </div>
-
+<div id="w" class="easyui-window" title="Fluid Window" style="width:80%;height:200px;padding:10px;" data-options="
+			iconCls:'icon-save',
+			onResize:function(){
+				$(this).window('hcenter');
+			}">
+    <p>The window has a width of 80%.</p>
+</div>
 </body>
 </html>

@@ -28,7 +28,12 @@
 
     <!--说明注解驱动-->
     <mvc:annotation-driven/>
+    <mvc:resources mapping="/easyui/**" location="/easyui/"/>
+    <!--<mvc:default-servlet-handler/>-->
 
+
+    <!--<mvc:resources location="/easyui/themes/default/" mapping="/easyui/themes/default/default/**"/>-->
+    <!--<mvc:resources location="/easyui/themes/" mapping="/easyui/themes/themes/**"/>-->
 
 
 </beans>

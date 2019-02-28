@@ -16,6 +16,12 @@
     <title>TestEric</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="<%=basePath%>/easyui/demo.css">
+    <script type="text/javascript" src="<%=basePath%>/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="<%=basePath%>/easyui/jquery.easyui.min.js"></script>
 </head>
 <body>
 
