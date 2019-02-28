@@ -13,23 +13,51 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    $(function () {
+        studentInfo();
+    });
+    function studentInfo() {
+        $.ajax({
+            url:"<%=basePath%>/stu/quseryStudents.do",
+            type:"post",
+            success:function (data) {
+                console.log(data)
+
+
+            }
+        })
+
+
+        //加载隐藏的个人档案的选人页面
+        $('#tb_PersonalFiles').datagrid({
+            rownumbers: true,
+            fit: false,
+            border: true,
+            singleSelect: false,
+            showHeader: true,
+            pagination: true,
+            pageSize: 20,
+            queryParams: { Name: name },
+            remoteSort: false,
+            sortName: 'id',
+            sortOrder: 'desc',
+            url: "<%=basePath%>/stu/quseryStudents.do",
+            pagination: true,
+            columns: [
+                [
+                    { field: 'id', title: '编号', width: 100 },
+                    { field: 'name', title: '名字', width: 60 },
+                    { field: 'age', title: '年龄', width: 60 }
+                ]
+            ]
+        });
+    }
+</script>
 <div align="center">
     <p>listStudent.jsp</p>
-    <form action="<%=basePath%>/stu/quseryStudents.do">
-        <table>
-            <tr>
-                <td>姓名:</td>
-                <td><input type="text" name="name"></td>
-            </tr>
-            <tr>
-                <td>年龄:</td>
-                <td><input type="text" name="age"></td>
-            </tr>
-            <tr>
-                <td><input type="submit" name="注册功能"></td>
-            </tr>
-        </table>
-    </form>
+    <table id="tb_PersonalFiles"></table>
+
 </div>
 </body>
 </html>
