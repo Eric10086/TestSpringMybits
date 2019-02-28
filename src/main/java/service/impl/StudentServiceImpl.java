@@ -40,4 +40,10 @@ public class StudentServiceImpl implements StudentService {
         int rows = stuDao.updateStudent(student);
         return rows;
     }
+
+    @Override
+    public List<Student> findByPage(int zroe, int one) {
+        List<Student> students = stuDao.findByPage(zroe,one);
+        return students;
+    }
 }

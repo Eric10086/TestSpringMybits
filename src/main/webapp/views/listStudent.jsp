@@ -19,15 +19,6 @@
     });
 
     function studentInfo() {
-        $.ajax({
-            url:"<%=basePath%>/stu/quseryStudents.do",
-            type:"post",
-            success:function (data) {
-                console.log(data)
-            }
-        })
-
-
         //加载学生信息
         $('#tb_StudentFiles').datagrid({
             rownumbers: true,
@@ -42,7 +33,7 @@
             remoteSort: false,
             sortName: 'id',
             sortOrder: 'desc',
-            url: "<%=basePath%>/stu/quseryStudents.do",
+            url: "<%=basePath%>/stu/findByPage.do",
             pagination: true,
             columns: [
                 [

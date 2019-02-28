@@ -9,4 +9,6 @@ public interface StudentService {
     List<Student> queryStudent();
     int delStudent(Integer id);
     int updateStudent(Student student);
+
+    List<Student> findByPage(int zroe,int one);
 }

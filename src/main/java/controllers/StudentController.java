@@ -68,4 +68,19 @@ public class StudentController {
         Integer rows= studentService.updateStudent(student);
         return rows;
     }
+
+    //查询TagParams Request
+    @ResponseBody
+    @RequestMapping("/findByPage.do")
+    public List<Student> findByPage(Pages pages){
+        System.out.println(pages);
+        int page = Integer.parseInt(pages.getPage());
+        int rows = Integer.parseInt(pages.getRows());
+        int page1 = ((page-1)*rows);
+        List<Student> list = studentService.findByPage(page1,rows);
+        if (list==null){
+            list=new ArrayList<>();
+        }
+        return list;
+    }
 }
