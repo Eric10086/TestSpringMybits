@@ -12,6 +12,7 @@
     </h1>
     <a href="<%=basePath%>/stu/index?target=addStudent">学生添加测试</a>
     <a href="<%=basePath%>/stu/index?target=listStudent">学生查询</a>
+    <a href="<%=basePath%>/stu/delStudents.do?id=15">学生删除</a>
 </div>
 </body>
 </html>

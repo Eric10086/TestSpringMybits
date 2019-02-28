@@ -41,6 +41,7 @@ public class StudentController {
         return mv;
     }
 
+    //查询
     @ResponseBody
     @RequestMapping("/quseryStudents.do")
     public List<Student> quseryStudents(){
@@ -51,4 +52,19 @@ public class StudentController {
         return list;
     }
 
+    //删除
+    @ResponseBody
+    @RequestMapping("/delStudents.do")
+    public int delStudents(int id){
+        Integer rows= studentService.delStudent(id);
+        return rows;
+    }
+
+    //更新
+    @ResponseBody
+    @RequestMapping("/updateStudent.do")
+    public int updateStudent(Student student){
+        Integer rows= studentService.updateStudent(student);
+        return rows;
+    }
 }

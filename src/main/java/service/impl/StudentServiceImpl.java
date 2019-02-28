@@ -28,4 +28,16 @@ public class StudentServiceImpl implements StudentService {
         List<Student> students = stuDao.selectStudents();
         return students;
     }
+
+    @Override
+    public int delStudent(Integer id) {
+        int rows = stuDao.delStudent(id);
+        return rows;
+    }
+
+    @Override
+    public int updateStudent(Student student) {
+        int rows = stuDao.updateStudent(student);
+        return rows;
+    }
 }
